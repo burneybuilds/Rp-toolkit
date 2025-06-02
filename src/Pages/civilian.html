@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civilian Commands - CommandCentral</title>
+    <link href="../Styles/main.css" rel="stylesheet">
+</head>
+<body>    <nav>
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="/Index.html">CommandCentral</a>
+                </div>
+                <div class="nav-links">
+                    <button onclick="toggleDarkMode()" class="dark-mode-button" title="Toggle dark mode" aria-label="Toggle dark mode">
+                        <svg class="moon-icon" viewBox="0 0 24 24">
+                            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="intro-section">
+            <h1 class="page-title">Civilian Commands</h1>
+            <p class="intro-text">General civilian commands for GTA RP. These commands are available to all players and help with basic interactions, animations, and everyday roleplay activities.</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" 
+                placeholder="Search Civilian commands..." 
+                onkeyup="filterCommands()"
+                class="search-input">
+        </div>
+        <div class="grid">
+            <div class="command-card">
+                <h3>Raise Hands</h3>
+                <div class="command-container">
+                    <code class="command-text">/handsup</code>
+                    <button onclick="copyToClipboard('/handsup')" class="copy-button">Copy</button>
+                </div>
+            </div>
+            <div class="command-card">
+                <h3>Phone Actions</h3>
+                <div class="command-container">
+                    <code class="command-text">/phone</code>
+                    <button onclick="copyToClipboard('/phone')" class="copy-button">Copy</button>
+                </div>
+            </div>
+            <div class="command-card">
+                <h3>ID Card</h3>
+                <div class="command-container">
+                    <code class="command-text">/showid [player_id]</code>
+                    <button onclick="copyToClipboard('/showid')" class="copy-button">Copy</button>
+                </div>
+            </div>
+            <div class="command-card">
+                <h3>Inventory</h3>
+                <div class="command-container">
+                    <code class="command-text">/inventory</code>
+                    <button onclick="copyToClipboard('/inventory')" class="copy-button">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="related-sections">
+            <h2>Related Departments</h2>
+            <div class="category-grid">
+                <a href="ems.html" class="category-card">
+                    <h3>EMS</h3>
+                    <p>Medical service commands</p>
+                </a>
+                <a href="government.html" class="category-card">
+                    <h3>Government</h3>
+                    <p>Administrative commands</p>
+                </a>
+                <a href="lspd.html" class="category-card">
+                    <h3>LSPD</h3>
+                    <p>Police department commands</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 CommandCentral - GTA RP Commands</p>
+        </div>
+    </footer>
+
+    <script src="../Scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Commands - CommandCentral</title>
+    <link href="../Styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="copy-notification" style="display:none;position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 28px;border-radius:8px;z-index:9999;font-size:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-family:inherit;">Copied! You can flex your T muscle in game to paste it.</div>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="/Index.html">CommandCentral</a>
+                </div>
+                <div class="nav-links">
+                    <!-- Removed dark mode toggle button -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="intro-section">
+            <h1 class="page-title">Government Commands</h1>
+            <p class="intro-text">Government and administrative commands for GTA RP. These commands are used by city officials and administrators to manage the city, create laws, and maintain order.</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" 
+                placeholder="Search Government commands..." 
+                onkeyup="filterCommands()"
+                class="search-input">
+        </div>
+        <main class="department-content">
+            <section class="command-section">
+                <div class="section-header" style="display: flex; align-items: center;">
+                    <h2 style="margin-right: 0.5rem;">On Duty</h2>
+                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
+                </div>
+                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No special On Duty commands for Government)</p>
+                <div class="command-grid full-width-command-grid" style="display:none;"></div>
+            </section>
+            <section class="command-section">
+                <div class="section-header" style="display: flex; align-items: center;">
+                    <h2 style="margin-right: 0.5rem;">After Code A / Death / 8 Hours</h2>
+                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
+                </div>
+                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No special commands for this event in Government)</p>
+                <div class="command-grid full-width-command-grid" style="display:none;"></div>
+            </section>
+            <section class="command-section">
+                <div class="section-header" style="display: flex; align-items: center;">
+                    <h2 style="margin-right: 0.5rem;">Off Duty</h2>
+                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
+                </div>
+                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No special Off Duty commands for Government)</p>
+                <div class="command-grid full-width-command-grid" style="display:none;"></div>
+            </section>
+            <section class="command-section">
+                <div class="section-header" style="display: flex; align-items: center;">
+                    <h2 style="margin-right: 0.5rem;">Government Commands</h2>
+                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
+                </div>
+                <div class="command-grid full-width-command-grid">
+                    <div class="command-card small-command-card">
+                        <span class="command-text">/law create [description]</span>
+                        <button class="copy-button" onclick="copyToClipboard('/law create', event)">Copy</button>
+                    </div>
+                    <div class="command-card small-command-card">
+                        <span class="command-text">/emergency [message]</span>
+                        <button class="copy-button" onclick="copyToClipboard('/emergency', event)">Copy</button>
+                    </div>
+                    <div class="command-card small-command-card">
+                        <span class="command-text">/license grant [player_id] [type]</span>
+                        <button class="copy-button" onclick="copyToClipboard('/license grant', event)">Copy</button>
+                    </div>
+                </div>
+            </section>
+            <section class="command-section">
+                <div class="section-header" style="display: flex; align-items: center;">
+                    <h2 style="margin-right: 0.5rem;">FIB</h2>
+                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
+                </div>
+                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No FIB-specific commands for Government)</p>
+                <div class="command-grid full-width-command-grid" style="display:none;"></div>
+            </section>
+        </main>
+
+        <div class="related-sections">
+            <h2>Related Departments</h2>
+            <div class="category-grid">
+                <a href="lspd.html" class="category-card">
+                    <h3>LSPD</h3>
+                    <p>Police department commands</p>
+                </a>
+                <a href="fib.html" class="category-card">
+                    <h3>FIB</h3>
+                    <p>Investigation commands</p>
+                </a>
+                <a href="civilian.html" class="category-card">
+                    <h3>Civilian</h3>
+                    <p>General civilian commands</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 CommandCentral - GTA RP Commands</p>
+        </div>
+    </footer>
+
+    <script src="../Scripts/main.js"></script>
+</body>
+</html>
