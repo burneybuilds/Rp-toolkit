@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSPD Commands - CommandCentral</title>
+    <title>LSPD Commands - Rp ToolKit</title>
     <link rel="stylesheet" href="../Styles/main.css">
     <script src="../Scripts/main.js" defer></script>
 </head>
@@ -13,10 +13,21 @@
         <div class="nav-container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="../../index.html">CommandCentral</a>
+                    <a href="../../index.html" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">RP ToolKit 🛠️</a>
                 </div>
                 <div class="nav-links">
-                    <!-- Removed dark mode toggle button -->
+                    <a href="../env/Contactus.html" class="nav-button contact-btn">
+                        <span>Contact Us</span>
+                        <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                    <a href="../env/Halloffame.html" class="nav-button leaderboard-btn">
+                        <span>Leaderboard</span>
+                        <svg class="leaderboard-icon" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M7 17v-7H3v7h4zm7 0v-13h-4v13h4zm7 0v-10h-4v10h4z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -24,18 +35,15 @@
 
     <header class="department-header lspd-header">
         <div class="header-content">
+            <img src="../../public/images/lspd.png" alt="LSPD Logo" class="header-logo">
             <h1>Los Santos Police Department</h1>
             <p>Essential commands and protocols for LSPD officers</p>
+            <p><strong>Leader:</strong> John Doe</p>
+            <p><strong>Term Start Date:</strong> June 1, 2025</p>
         </div>
     </header>
 
     <main class="department-content">
-        <div class="search-container">
-            <input type="text" id="searchInput" 
-                placeholder="Search LSPD commands..." 
-                onkeyup="filterCommands()"
-                class="search-input">
-        </div>
         <section class="command-section">
             <div class="section-header" style="display: flex; align-items: center;">
                 <h2 style="margin-right: 0.5rem;">On Duty</h2>
@@ -44,7 +52,7 @@
                 </button>
             </div>
             <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">You only need to use it once a day</p>
-            <div class="command-grid full-width-command-grid">
+            <div class="command-grid full-width-command-grid" style="display: block;">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me Takes out Bodycam and attaches Bodycam to chest and checks its ballistic, water proof.</span>
                     <button class="copy-button" onclick="copyToClipboard('/me Takes out Bodycam and attaches Bodycam to chest and checks its ballistic, water proof.', event)">Copy</button>
@@ -68,7 +76,7 @@
                 </button>
             </div>
             <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">Do this after a Code A, after death, or after 8 hours!!</p>
-            <div class="command-grid full-width-command-grid">
+            <div class="command-grid full-width-command-grid" style="display: block;">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me refreshes bodycam</span>
                     <button class="copy-button" onclick="copyToClipboard('/me refreshes bodycam', event)">Copy</button>
@@ -87,7 +95,7 @@
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <div class="command-grid full-width-command-grid">
+            <div class="command-grid full-width-command-grid" style="display: block;">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.</span>
                     <button class="copy-button" onclick="copyToClipboard('/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.', event)">Copy</button>
@@ -106,7 +114,7 @@
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <div class="command-grid full-width-command-grid">
+            <div class="command-grid full-width-command-grid" style="display: block;">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me Takes SD card out of the Bodycam and hands over to Lawyer</span>
                     <button class="copy-button" onclick="copyToClipboard('/me Takes SD card out of the Bodycam and hands over to Lawyer', event)">Copy</button>
@@ -144,12 +152,12 @@
 
         <section class="command-section">
             <div class="section-header" style="display: flex; align-items: center;">
-                <h2 style="margin-right: 0.5rem;">FIB</h2>
+                <h2 style="margin-right: 0.5rem;">Under Cover</h2>
                 <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <div class="command-grid full-width-command-grid">
+            <div class="command-grid full-width-command-grid" style="display: block;">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof</span>
                     <button class="copy-button" onclick="copyToClipboard('/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof', event)">Copy</button>
@@ -191,7 +199,7 @@
     <footer class="glass-footer">
         <div class="container">
             <div class="footer-content">
-                <p class="dev-credit">Developed by Geeky with ❤️</p>
+                <p class="dev-credit">Developed by Albert </p>
             </div>
         </div>
     </footer>
