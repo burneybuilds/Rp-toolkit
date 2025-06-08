@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSPD Commands - Rp ToolKit</title>
-    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="stylesheet" href="../Styles/pages.css">
     <script src="../Scripts/main.js" defer></script>
 </head>
 <body>
-    <div id="copy-notification" style="display:none;position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 28px;border-radius:8px;z-index:9999;font-size:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-family:inherit;">Copied! You can flex your T muscle in game to paste it.</div>
+    <div id="copy-notification">Copied! You can flex your T muscle in game to paste it.</div>
     <nav class="blue-nav">
         <div class="nav-container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="../../index.html" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">RP ToolKit 🛠️</a>
+                    <a href="../../index.html" class="logo-link">RP ToolKit 🛠️</a>
                 </div>
                 <div class="nav-links">
                     <a href="../env/Contactus.html" class="nav-button contact-btn">
@@ -45,14 +45,14 @@
 
     <main class="department-content">
         <section class="command-section">
-            <div class="section-header" style="display: flex; align-items: center;">
-                <h2 style="margin-right: 0.5rem;">On Duty</h2>
+            <div class="section-header">
+                <h2>On Duty</h2>
                 <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">You only need to use it once a day</p>
-            <div class="command-grid full-width-command-grid" style="display: block;">
+            <p class="italic-text">You only need to use it once a day</p>
+            <div class="command-grid full-width-command-grid">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me Takes out Bodycam and attaches Bodycam to chest and checks its ballistic, water proof.</span>
                     <button class="copy-button" onclick="copyToClipboard('/me Takes out Bodycam and attaches Bodycam to chest and checks its ballistic, water proof.', event)">Copy</button>
@@ -69,14 +69,14 @@
         </section>
 
         <section class="command-section">
-            <div class="section-header" style="display: flex; align-items: center;">
-                <h2 style="margin-right: 0.5rem;">After Code A / Death / 8 Hours</h2>
+            <div class="section-header">
+                <h2>After Code A / Death / 8 Hours</h2>
                 <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">Do this after a Code A, after death, or after 8 hours!!</p>
-            <div class="command-grid full-width-command-grid" style="display: block;">
+            <p class="italic-text">Do this after a Code A, after death, or after 8 hours!!</p>
+            <div class="command-grid full-width-command-grid">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me refreshes bodycam</span>
                     <button class="copy-button" onclick="copyToClipboard('/me refreshes bodycam', event)">Copy</button>
@@ -89,13 +89,13 @@
         </section>
 
         <section class="command-section">
-            <div class="section-header" style="display: flex; align-items: center;">
-                <h2 style="margin-right: 0.5rem;">Off Duty</h2>
+            <div class="section-header">
+                <h2>Off Duty</h2>
                 <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <div class="command-grid full-width-command-grid" style="display: block;">
+            <div class="command-grid full-width-command-grid">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.</span>
                     <button class="copy-button" onclick="copyToClipboard('/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.', event)">Copy</button>
@@ -108,13 +108,13 @@
         </section>
 
         <section class="command-section">
-            <div class="section-header" style="display: flex; align-items: center;">
-                <h2 style="margin-right: 0.5rem;">LSPD Commands</h2>
+            <div class="section-header">
+                <h2>LSPD Commands</h2>
                 <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <div class="command-grid full-width-command-grid" style="display: block;">
+            <div class="command-grid full-width-command-grid">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me Takes SD card out of the Bodycam and hands over to Lawyer</span>
                     <button class="copy-button" onclick="copyToClipboard('/me Takes SD card out of the Bodycam and hands over to Lawyer', event)">Copy</button>
@@ -151,13 +151,13 @@
         </section>
 
         <section class="command-section">
-            <div class="section-header" style="display: flex; align-items: center;">
-                <h2 style="margin-right: 0.5rem;">Under Cover</h2>
+            <div class="section-header">
+                <h2>Under Cover</h2>
                 <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
                     <span class="chevron">▼</span>
                 </button>
             </div>
-            <div class="command-grid full-width-command-grid" style="display: block;">
+            <div class="command-grid full-width-command-grid">
                 <div class="command-card small-command-card">
                     <span class="command-text">/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof</span>
                     <button class="copy-button" onclick="copyToClipboard('/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof', event)">Copy</button>

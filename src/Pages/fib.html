@@ -3,116 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIB Commands - CommandCentral</title>
-    <link href="../Styles/main.css" rel="stylesheet">
+    <title>LSPD Commands - Rp ToolKit</title>
+    <link rel="stylesheet" href="../Styles/pages.css">
+    <script src="../Scripts/main.js" defer></script>
 </head>
 <body>
-    <div id="copy-notification" style="display:none;position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 28px;border-radius:8px;z-index:9999;font-size:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-family:inherit;">Copied! You can flex your T muscle in game to paste it.</div>
-    <nav>
+    <div id="copy-notification">Copied! You can flex your T muscle in game to paste it.</div>
+    <nav class="blue-nav">
         <div class="nav-container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="/Index.html">CommandCentral</a>
+                    <a href="../../index.html" class="logo-link">RP ToolKit 🛠️</a>
                 </div>
                 <div class="nav-links">
-                    <!-- Removed dark mode toggle button -->
+                    <a href="../env/Contactus.html" class="nav-button contact-btn">
+                        <span>Contact Us</span>
+                        <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                    <a href="../env/Halloffame.html" class="nav-button leaderboard-btn">
+                        <span>Leaderboard</span>
+                        <svg class="leaderboard-icon" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M7 17v-7H3v7h4zm7 0v-13h-4v13h4zm7 0v-10h-4v10h4z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="container">
-        <div class="intro-section">
-            <h1 class="page-title">FIB Commands</h1>
-            <p class="intro-text">Federal Investigation Bureau commands for GTA RP. These specialized commands are used for high-level investigations, surveillance, and federal law enforcement operations.</p>
+    <header class="department-header lspd-header">
+        <div class="header-content">
+            <img src="../../public/images/lspd.png" alt="LSPD Logo" class="header-logo">
+            <h1>Los Santos Police Department</h1>
+            <p>Essential commands and protocols for LSPD officers</p>
+            <p><strong>Leader:</strong> John Doe</p>
+            <p><strong>Term Start Date:</strong> June 1, 2025</p>
         </div>
+    </header>
 
-        <div class="search-container">
-            <input type="text" id="searchInput" 
-                placeholder="Search FIB commands..." 
-                onkeyup="filterCommands()"
-                class="search-input">
-        </div>
-        <main class="department-content">
-            <section class="command-section">
-                <div class="section-header" style="display: flex; align-items: center;">
-                    <h2 style="margin-right: 0.5rem;">On Duty</h2>
-                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
-                </div>
-                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No special On Duty commands for FIB)</p>
-                <div class="command-grid full-width-command-grid" style="display:none;"></div>
-            </section>
-            <section class="command-section">
-                <div class="section-header" style="display: flex; align-items: center;">
-                    <h2 style="margin-right: 0.5rem;">After Code A / Death / 8 Hours</h2>
-                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
-                </div>
-                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No special commands for this event in FIB)</p>
-                <div class="command-grid full-width-command-grid" style="display:none;"></div>
-            </section>
-            <section class="command-section">
-                <div class="section-header" style="display: flex; align-items: center;">
-                    <h2 style="margin-right: 0.5rem;">Off Duty</h2>
-                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
-                </div>
-                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No special Off Duty commands for FIB)</p>
-                <div class="command-grid full-width-command-grid" style="display:none;"></div>
-            </section>
-            <section class="command-section">
-                <div class="section-header" style="display: flex; align-items: center;">
-                    <h2 style="margin-right: 0.5rem;">FIB Commands</h2>
-                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
-                </div>
-                <div class="command-grid full-width-command-grid">
-                    <div class="command-card small-command-card">
-                        <span class="command-text">/track [phone_number]</span>
-                        <button class="copy-button" onclick="copyToClipboard('/track', event)">Copy</button>
-                    </div>
-                    <div class="command-card small-command-card">
-                        <span class="command-text">/surveil [player_id]</span>
-                        <button class="copy-button" onclick="copyToClipboard('/surveil', event)">Copy</button>
-                    </div>
-                    <div class="command-card small-command-card">
-                        <span class="command-text">/wiretap [phone_number]</span>
-                        <button class="copy-button" onclick="copyToClipboard('/wiretap', event)">Copy</button>
-                    </div>
-                </div>
-            </section>
-            <section class="command-section">
-                <div class="section-header" style="display: flex; align-items: center;">
-                    <h2 style="margin-right: 0.5rem;">LSPD</h2>
-                    <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)"><span class="chevron">▼</span></button>
-                </div>
-                <p style="font-style: italic; color: #888; margin-bottom: 1.5rem;">(No LSPD-specific commands for FIB)</p>
-                <div class="command-grid full-width-command-grid" style="display:none;"></div>
-            </section>
-        </main>
-
-        <div class="related-sections">
-            <h2>Related Departments</h2>
-            <div class="category-grid">
-                <a href="lspd.html" class="category-card">
-                    <h3>LSPD</h3>
-                    <p>Police department commands</p>
-                </a>
-                <a href="sahp.html" class="category-card">
-                    <h3>SAHP</h3>
-                    <p>Highway patrol commands</p>
-                </a>
-                <a href="government.html" class="category-card">
-                    <h3>Government</h3>
-                    <p>Administrative commands</p>
-                </a>
+    <main class="department-content">
+        <section class="command-section">
+            <div class="section-header">
+                <h2>On Duty</h2>
+                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
+                    <span class="chevron">▼</span>
+                </button>
             </div>
-        </div>
+            <p class="italic-text">You only need to use it once a day</p>
+            <div class="command-grid full-width-command-grid">
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me Takes out Bodycam and attaches Bodycam to chest and checks its ballistic, water proof.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me Takes out Bodycam and attaches Bodycam to chest and checks its ballistic, water proof.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/do It is recording, bodycam is ballistic and waterproof</span>
+                    <button class="copy-button" onclick="copyToClipboard('/do It is recording, bodycam is ballistic and waterproof', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me Connect PDA to nearby cell tower of FIB for criminal tracking.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me Connect PDA to nearby cell tower of FIB for criminal tracking.', event)">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <div class="section-header">
+                <h2>After Code A / Death / 8 Hours</h2>
+                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
+                    <span class="chevron">▼</span>
+                </button>
+            </div>
+            <p class="italic-text">Do this after a Code A, after death, or after 8 hours!!</p>
+            <div class="command-grid full-width-command-grid">
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me refreshes bodycam</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me refreshes bodycam', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/do it is recording</span>
+                    <button class="copy-button" onclick="copyToClipboard('/do it is recording', event)">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <div class="section-header">
+                <h2>Off Duty</h2>
+                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
+                    <span class="chevron">▼</span>
+                </button>
+            </div>
+            <div class="command-grid full-width-command-grid">
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me places ID badge inside the locker until the next shift.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me places ID badge inside the locker until the next shift.', event)">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <div class="section-header">
+                <h2>LSPD Commands</h2>
+                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
+                    <span class="chevron">▼</span>
+                </button>
+            </div>
+            <div class="command-grid full-width-command-grid">
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me Takes SD card out of the Bodycam and hands over to Lawyer</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me Takes SD card out of the Bodycam and hands over to Lawyer', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me Takes SD card out of the Bodycam and hands over to Lawyer</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me Takes SD card out of the Bodycam and hands over to Lawyer', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me breaks trunk with crowbar.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me breaks trunk with crowbar.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me grabs universal size jumpsuit from behind the counter.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me grabs universal size jumpsuit from behind the counter.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me looks up the VIN in the database for license plate and owner information</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me looks up the VIN in the database for license plate and owner information', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes the FIB drone from the trunk and puts it in the backpack</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the trunk and puts it in the backpack', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me launches the drone.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me launches the drone.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes the FIB drone from the ground and puts it in the backpack</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the ground and puts it in the backpack', event)">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <div class="section-header">
+                <h2>Under Cover</h2>
+                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
+                    <span class="chevron">▼</span>
+                </button>
+            </div>
+            <div class="command-grid full-width-command-grid">
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/do It is recording, is ballistic and water proof.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/do It is recording, is ballistic and water proof.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me connects PDA to the nearest cell tower</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me connects PDA to the nearest cell tower', event)">Copy</button>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <div class="related-sections">
+        <h2>Related Departments</h2>
+        <div class="category-grid">
+            <a href="ems.html" class="category-card">
+                <h3>EMS</h3>
+                <p>Medical service commands</p>
+            </a>
+            <a href="sahp.html" class="category-card">
+                <h3>SAHP</h3>
+                <p>Highway patrol commands</p>
+            </a>
+            <a href="fib.html" class="category-card">
+                <h3>FIB</h3>
+                <p>Investigation commands</p>
+            </a>
+            <a href="government.html" class="category-card">
+                <h3>Government</h3>
+                <p>Administrative commands</p>
+            </a>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
         <div class="container">
-            <p>© 2025 CommandCentral - GTA RP Commands</p>
+            <div class="footer-content">
+                <p class="dev-credit">Developed by Albert </p>
+            </div>
         </div>
     </footer>
-
-    <script src="../Scripts/main.js"></script>
 </body>
 </html>

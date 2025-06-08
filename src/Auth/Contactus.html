@@ -79,6 +79,9 @@
                 padding: 1.2rem 0.5rem 1.2rem 0.5rem;
             }
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -113,10 +116,10 @@
             <label for="name">Discord Username</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="message">Suggestion</label>
+            <input type="checkbox" name="botcheck" class="hidden">
             <textarea id="message" name="message" placeholder="Type your suggestion here..." required></textarea>
 
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="checkbox" name="botcheck" class="hidden">
 
             <button type="submit">Submit Suggestion</button>
         </form>
