@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSPD Commands - Rp ToolKit</title>
+    <title>EMS Commands - Rp ToolKit</title>
     <link rel="stylesheet" href="../Styles/pages.css">
+    <link rel="stylesheet" href="../Styles/style.css">
     <script src="../Scripts/main.js" defer></script>
 </head>
 <body>
@@ -33,13 +34,17 @@
         </div>
     </nav>
 
-    <header class="department-header lspd-header">
+    <header class="department-header ems-header">
         <div class="header-content">
-            <img src="../../public/images/lspd.png" alt="LSPD Logo" class="header-logo">
-            <h1>Los Santos Police Department</h1>
-            <p>Essential commands and protocols for LSPD officers</p>
-            <p><strong>Leader:</strong> John Doe</p>
-            <p><strong>Term Start Date:</strong> June 1, 2025</p>
+            <div class="header-left">
+                <img src="../../public/images/ems.jpg" alt="EMS Logo" class="header-logo">
+            </div>
+            <div class="header-right">
+                <h1>EMS</h1>
+                <p>Emergency Medical Services</p>
+                <p><strong>Leader:</strong> John Doe</p>
+                <p><strong>Term Start Date:</strong> June 1, 2025</p>
+            </div>
         </div>
     </header>
 
@@ -62,8 +67,8 @@
                     <button class="copy-button" onclick="copyToClipboard('/do It is recording, bodycam is ballistic and waterproof', event)">Copy</button>
                 </div>
                 <div class="command-card small-command-card">
-                    <span class="command-text">/me Connect PDA to nearby cell tower of FIB for criminal tracking.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me Connect PDA to nearby cell tower of FIB for criminal tracking.', event)">Copy</button>
+                    <span class="command-text">/me Connect PDA to nearby cell tower of EMS</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me Connect PDA to nearby cell tower of EMS', event)">Copy</button>
                 </div>
             </div>
         </section>
@@ -97,7 +102,7 @@
             </div>
             <div class="command-grid full-width-command-grid">
                 <div class="command-card small-command-card">
-                    <span class="command-text">/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.</span>
+                    <span class="command-text">/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to EMS servers before going off duty.</span>
                     <button class="copy-button" onclick="copyToClipboard('/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.', event)">Copy</button>
                 </div>
                 <div class="command-card small-command-card">
@@ -123,53 +128,6 @@
                     <span class="command-text">/me Takes SD card out of the Bodycam and hands over to Lawyer</span>
                     <button class="copy-button" onclick="copyToClipboard('/me Takes SD card out of the Bodycam and hands over to Lawyer', event)">Copy</button>
                 </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me breaks trunk with crowbar.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me breaks trunk with crowbar.', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me grabs universal size jumpsuit from behind the counter.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me grabs universal size jumpsuit from behind the counter.', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me looks up the VIN in the database for license plate and owner information</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me looks up the VIN in the database for license plate and owner information', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes the FIB drone from the trunk and puts it in the backpack</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the trunk and puts it in the backpack', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me launches the drone.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me launches the drone.', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes the FIB drone from the ground and puts it in the backpack</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the ground and puts it in the backpack', event)">Copy</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="command-section">
-            <div class="section-header">
-                <h2>Under Cover</h2>
-                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
-                    <span class="chevron">▼</span>
-                </button>
-            </div>
-            <div class="command-grid full-width-command-grid">
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/do It is recording, is ballistic and water proof.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/do It is recording, is ballistic and water proof.', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me connects PDA to the nearest cell tower</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me connects PDA to the nearest cell tower', event)">Copy</button>
-                </div>
             </div>
         </section>
     </main>
@@ -185,8 +143,8 @@
                 <h3>SAHP</h3>
                 <p>Highway patrol commands</p>
             </a>
-            <a href="fib.html" class="category-card">
-                <h3>FIB</h3>
+            <a href="EMS.html" class="category-card">
+                <h3>EMS</h3>
                 <p>Investigation commands</p>
             </a>
             <a href="government.html" class="category-card">

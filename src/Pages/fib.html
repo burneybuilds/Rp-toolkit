@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSPD Commands - Rp ToolKit</title>
+    <title>FIB Commands - Rp ToolKit</title>
     <link rel="stylesheet" href="../Styles/pages.css">
+    <link rel="stylesheet" href="../Styles/style.css">
     <script src="../Scripts/main.js" defer></script>
 </head>
 <body>
@@ -33,13 +34,17 @@
         </div>
     </nav>
 
-    <header class="department-header lspd-header">
+    <header class="department-header fib-header">
         <div class="header-content">
-            <img src="../../public/images/lspd.png" alt="LSPD Logo" class="header-logo">
-            <h1>Los Santos Police Department</h1>
-            <p>Essential commands and protocols for LSPD officers</p>
-            <p><strong>Leader:</strong> John Doe</p>
-            <p><strong>Term Start Date:</strong> June 1, 2025</p>
+            <div class="header-left">
+                <img src="../../public/images/fib.jpg" alt="FIB Logo" class="header-logo">
+            </div>
+            <div class="header-right">
+                <h1>FIB</h1>
+                <p>Federal Investigation Bureau</p>
+                <p><strong>Leader:</strong> John Doe</p>
+                <p><strong>Term Start Date:</strong> June 1, 2025</p>
+            </div>
         </div>
     </header>
 
@@ -97,7 +102,7 @@
             </div>
             <div class="command-grid full-width-command-grid">
                 <div class="command-card small-command-card">
-                    <span class="command-text">/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.</span>
+                    <span class="command-text">/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to FIB servers before going off duty.</span>
                     <button class="copy-button" onclick="copyToClipboard('/me removes SD card from the bodycam, inserts it into a phone, and uploads the data to LSPD servers before going off duty.', event)">Copy</button>
                 </div>
                 <div class="command-card small-command-card">
@@ -109,7 +114,42 @@
 
         <section class="command-section">
             <div class="section-header">
-                <h2>LSPD Commands</h2>
+                <h2>Under Cover</h2>
+                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
+                    <span class="chevron">▼</span>
+                </button>
+            </div>
+            <div class="command-grid full-width-command-grid">
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes the FIB drone from the trunk and puts it in the backpack</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the trunk and puts it in the backpack', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me launches the drone.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me launches the drone.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes the FIB drone from the ground and puts it in the backpack</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the ground and puts it in the backpack', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/do It is recording, is ballistic and water proof.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/do It is recording, is ballistic and water proof.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me connects PDA to the nearest cell tower</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me connects PDA to the nearest cell tower', event)">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <div class="section-header">
+                <h2>Essential Commands</h2>
                 <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
                     <span class="chevron">▼</span>
                 </button>
@@ -135,43 +175,9 @@
                     <span class="command-text">/me looks up the VIN in the database for license plate and owner information</span>
                     <button class="copy-button" onclick="copyToClipboard('/me looks up the VIN in the database for license plate and owner information', event)">Copy</button>
                 </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes the FIB drone from the trunk and puts it in the backpack</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the trunk and puts it in the backpack', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me launches the drone.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me launches the drone.', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes the FIB drone from the ground and puts it in the backpack</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the ground and puts it in the backpack', event)">Copy</button>
-                </div>
             </div>
         </section>
 
-        <section class="command-section">
-            <div class="section-header">
-                <h2>Under Cover</h2>
-                <button class="dropdown-toggle" onclick="toggleSectionDropdown(this)">
-                    <span class="chevron">▼</span>
-                </button>
-            </div>
-            <div class="command-grid full-width-command-grid">
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes out bodycam and attaches it to belt, hides it, checks its ballistic and water proof', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/do It is recording, is ballistic and water proof.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/do It is recording, is ballistic and water proof.', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me connects PDA to the nearest cell tower</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me connects PDA to the nearest cell tower', event)">Copy</button>
-                </div>
-            </div>
-        </section>
     </main>
 
     <div class="related-sections">
@@ -185,8 +191,8 @@
                 <h3>SAHP</h3>
                 <p>Highway patrol commands</p>
             </a>
-            <a href="fib.html" class="category-card">
-                <h3>FIB</h3>
+            <a href="lspd.html" class="category-card">
+                <h3>LPSD</h3>
                 <p>Investigation commands</p>
             </a>
             <a href="government.html" class="category-card">
@@ -199,7 +205,7 @@
     <footer class="glass-footer">
         <div class="container">
             <div class="footer-content">
-                <p class="dev-credit">Developed by Albert </p>
+                <p class="dev-credit">Developed by Albert — Like a mod menu, but legal.</p>
             </div>
         </div>
     </footer>

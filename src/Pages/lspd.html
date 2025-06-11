@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSPD Commands - Rp ToolKit</title>
     <link rel="stylesheet" href="../Styles/pages.css">
+    <link rel="stylesheet" href="../Styles/style.css">
     <script src="../Scripts/main.js" defer></script>
 </head>
 <body>
@@ -35,11 +36,15 @@
 
     <header class="department-header lspd-header">
         <div class="header-content">
-            <img src="../../public/images/lspd.png" alt="LSPD Logo" class="header-logo">
-            <h1>Los Santos Police Department</h1>
-            <p>Essential commands and protocols for LSPD officers</p>
-            <p><strong>Leader:</strong> John Doe</p>
-            <p><strong>Term Start Date:</strong> June 1, 2025</p>
+            <div class="header-left">
+                <img src="../../public/images/lspd.png" alt="LSPD Logo" class="header-logo">
+            </div>
+            <div class="header-right">
+                <h1>LSPD</h1>
+                <p>Los Santos Police Department</p>
+                <p><strong>Leader:</strong> John Doe</p>
+                <p><strong>Term Start Date:</strong> June 1, 2025</p>
+            </div>
         </div>
     </header>
 
@@ -62,8 +67,8 @@
                     <button class="copy-button" onclick="copyToClipboard('/do It is recording, bodycam is ballistic and waterproof', event)">Copy</button>
                 </div>
                 <div class="command-card small-command-card">
-                    <span class="command-text">/me Connect PDA to nearby cell tower of FIB for criminal tracking.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me Connect PDA to nearby cell tower of FIB for criminal tracking.', event)">Copy</button>
+                    <span class="command-text">/me Connect PDA to nearby cell tower of LSPD for criminal tracking.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me Connect PDA to nearby cell tower of LSPD for criminal tracking.', event)">Copy</button>
                 </div>
             </div>
         </section>
@@ -135,18 +140,6 @@
                     <span class="command-text">/me looks up the VIN in the database for license plate and owner information</span>
                     <button class="copy-button" onclick="copyToClipboard('/me looks up the VIN in the database for license plate and owner information', event)">Copy</button>
                 </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes the FIB drone from the trunk and puts it in the backpack</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the trunk and puts it in the backpack', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me launches the drone.</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me launches the drone.', event)">Copy</button>
-                </div>
-                <div class="command-card small-command-card">
-                    <span class="command-text">/me takes the FIB drone from the ground and puts it in the backpack</span>
-                    <button class="copy-button" onclick="copyToClipboard('/me takes the FIB drone from the ground and puts it in the backpack', event)">Copy</button>
-                </div>
             </div>
         </section>
 
@@ -170,6 +163,18 @@
                     <span class="command-text">/me connects PDA to the nearest cell tower</span>
                     <button class="copy-button" onclick="copyToClipboard('/me connects PDA to the nearest cell tower', event)">Copy</button>
                 </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes the LSPD drone from the trunk and puts it in the backpack</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes the LSPD drone from the trunk and puts it in the backpack', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me launches the drone.</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me launches the drone.', event)">Copy</button>
+                </div>
+                <div class="command-card small-command-card">
+                    <span class="command-text">/me takes the LSPD drone from the ground and puts it in the backpack</span>
+                    <button class="copy-button" onclick="copyToClipboard('/me takes the LSPD drone from the ground and puts it in the backpack', event)">Copy</button>
+                </div>
             </div>
         </section>
     </main>
@@ -185,8 +190,8 @@
                 <h3>SAHP</h3>
                 <p>Highway patrol commands</p>
             </a>
-            <a href="fib.html" class="category-card">
-                <h3>FIB</h3>
+            <a href="LSPD.html" class="category-card">
+                <h3>LSPD</h3>
                 <p>Investigation commands</p>
             </a>
             <a href="government.html" class="category-card">

@@ -67,6 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// JavaScript to ensure proper alignment
+window.addEventListener('DOMContentLoaded', () => {
+    const headerContent = document.querySelector('.header-content');
+    if (headerContent) {
+        headerContent.style.display = 'flex';
+        headerContent.style.alignItems = 'center';
+        headerContent.style.justifyContent = 'space-between';
+    }
+
+    // Ensure navbar and header stick together
+    const navbar = document.querySelector('.blue-nav');
+    const header = document.querySelector('.department-header');
+
+    if (navbar && header) {
+        navbar.style.marginBottom = '0';
+        header.style.marginTop = '0';
+    }
+});
+
 function filterCommands() {
     const searchInput = document.getElementById('searchInput');
     const filter = searchInput.value.toLowerCase();
@@ -92,3 +111,14 @@ function toggleSectionDropdown(button) {
         chevron.textContent = '►';
     }
 }
+
+// Add a note indicating the page is under development
+window.addEventListener('DOMContentLoaded', () => {
+    const hallOfFamePage = document.querySelector('.hall-of-fame-glass-wall');
+    if (hallOfFamePage) {
+        const message = document.createElement('div');
+        message.className = 'message';
+        message.innerHTML = '<p>This page is currently under development. Please check back later!</p>';
+        hallOfFamePage.appendChild(message);
+    }
+});
