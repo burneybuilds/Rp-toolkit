@@ -1,84 +1,68 @@
-/* General styling for department pages */
+/* Clean and consistent layout for department pages */
 .department-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: var(--accent-blue);
+    color: var(--primary-text);
     border-bottom: 2px solid var(--accent-blue);
     margin-top: 60px; /* Ensure header starts below navbar */
     position: relative;
     z-index: 5;
 }
 
-.header-left {
-    flex: 1;
-    text-align: left;
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.header-right {
-    flex: 2;
-    text-align: left;
-}
-
-.header-logo {
-    max-width: 200px;
+.header-left img {
+    max-width: 150px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--hover-shadow);
+    border: 2px solid var(--accent-green);
 }
 
-.department-header h1 {
+.header-right h1 {
     font-size: 2.5rem;
     margin: 10px 0;
+    color: var(--accent-purple);
 }
 
-.department-header p {
+.header-right p {
     font-size: 1.2rem;
     margin: 5px 0;
+    color: var(--secondary-text);
 }
 
 .department-content {
     padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--hover-shadow);
+    color: var(--primary-text);
+    border-width: 2px;
+    border-style: solid;
 }
 
 .command-section {
     margin-bottom: 20px;
-    background-color: var(--card-dark);
+    background-color: var(--accent-red);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px var(--hover-shadow);
-    color: var(--text-light);
+    color: var(--primary-text);
 }
 
-.command-section .section-header h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.command-section .dropdown-toggle {
-    background-color: var(--accent-blue);
-    color: var(--text-light);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color var(--transition-speed);
-}
-
-.command-section .dropdown-toggle:hover {
-    background-color: var(--accent-green);
-}
-
-/* Ensure copy buttons align in one horizontal line */
 .command-section .command-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid var(--hover-shadow);
+    border-bottom: 1px solid var(--accent-blue);
 }
 
 .command-section .command-row:last-child {
@@ -87,17 +71,17 @@
 
 .command-section .command-text {
     flex: 1;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for long commands */
-    color: var(--text-light);
+    text-overflow: ellipsis;
+    color: var(--secondary-text);
     font-size: 1rem;
 }
 
 .command-section .copy-button {
     margin-left: 10px;
-    background-color: var(--accent-blue);
-    color: var(--text-light);
+    background-color: var(--accent-green);
+    color: var(--primary-text);
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -106,44 +90,45 @@
 }
 
 .command-section .copy-button:hover {
+    background-color: var(--accent-purple);
+}
+
+.ems-header {
     background-color: var(--accent-green);
 }
 
-/* Specific styling for FIB */
 .fib-header {
-    background-color: #0a0a5a;
+    background-color: var(--accent-blue);
 }
 
-/* Specific styling for EMS */
-.ems-header {
-    background-color: #5a0a0a;
-}
-
-/* Specific styling for Government */
-.government-header {
-    background-color: #0a5a0a;
-}
-
-/* Specific styling for LSPD */
 .lspd-header {
-    background-color: #0a0a5a;
+    background-color: var(--accent-red) !important;
 }
 
-/* Specific styling for SAHP */
 .sahp-header {
-    background-color: #5a5a0a;
+    background-color: var(--accent-purple);
 }
 
-/* Fix overlapping issues between navbar and header container */
-.blue-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background: rgba(31, 41, 55, 0.7);
-    -webkit-backdrop-filter: blur(10px); /* Added for Safari compatibility */
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.government-header {
+    background-color: var(--accent-blue);
+}
+
+.ems-content {
+    border-color: var(--accent-green);
+}
+
+.fib-content {
+    border-color: var(--accent-blue);
+}
+
+.lspd-content {
+    border-color: var(--accent-red);
+}
+
+.sahp-content {
+    border-color: var(--accent-purple);
+}
+
+.government-content {
+    border-color: var(--accent-blue);
 }
